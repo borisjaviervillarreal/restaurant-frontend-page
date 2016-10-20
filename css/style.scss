@@ -121,6 +121,13 @@ textarea {
     }
 }
 
+#navigation{
+    li{
+        @extends .medium;
+        padding: 5px 10px;
+    }
+}
+
 
 
 
@@ -159,7 +166,7 @@ textarea {
 }
 
 .top{
-    top: 1em;
+    top: 3em;
 }
 
 .right{
@@ -172,6 +179,10 @@ textarea {
 
 .white-text{
     color: white;
+}
+
+.medium{
+    font-size: 1.5em;
 }
 
 .dancing-script{
