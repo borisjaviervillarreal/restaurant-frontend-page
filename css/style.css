@@ -111,6 +111,20 @@ textarea {
 #navigation li {
   @extends .medium;
   padding: 5px 10px;
+  transition: all 0.5s;
+}
+
+#navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#navigation li a {
+  color: white;
+  cursor: pointer;
+}
+
+#navigation li a:hover {
+  text-decoration: none;
 }
 
 /* ==========================================================================
@@ -122,6 +136,10 @@ textarea {
 
 .full-height {
   height: 100%;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .row {
@@ -136,6 +154,10 @@ textarea {
   position: relative;
 }
 
+.bottom {
+  bottom: 0px;
+}
+
 .top {
   top: 3em;
 }
@@ -148,12 +170,24 @@ textarea {
   z-index: 10;
 }
 
+.black {
+  background-color: #222;
+}
+
 .white-text {
   color: white;
 }
 
 .medium {
   font-size: 1.5em;
+}
+
+.large-padding {
+  padding: 10px 15px;
+}
+
+.absolute {
+  position: absolute;
 }
 
 .dancing-script {
