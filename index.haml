@@ -32,12 +32,12 @@
                 %h1.dancing-script.title.no-margin Restaurante Villarreal
                 %p#is-open Abierto ahora
         %nav.fixed.top.right.white-text#navigation
+            -menu = ["Inicio", "Menú", "Galería", "Contacto", "Como llegar"]
             %ul.list-inline
-                %li Inicio
-                %li Menú
-                %li Galería
-                %li Contacto
-                %li Como llegar
+                -menu.each do |item|
+                    %li
+                        %a= item
+                
 
 
 
