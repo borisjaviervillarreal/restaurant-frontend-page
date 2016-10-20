@@ -1,0 +1,26 @@
+!!!5
+%html{class:"no-js", lang:"es"}
+    %head
+        %meta{chartset:"utf-8"}
+        %title La mejor comida en Restaurante Villarreal
+        %meta{name:"description", content:"Come rico en el mejor restaurante de la ciudad de Quito"}
+        %link{rel:"stylesheet", href:"css/normalize.css"}
+        %link{rel:"stylesheet", href:"css/style.css"}
+        %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+    %body
+    ="<!--[if lt IE 9]>"
+    %p{class:"browserupgrade"}
+        Estas usando un navegador
+        %strong desactualizado
+        Por favor
+        %a{href:"http://browsehappy.com/"}
+            actualiza tu navegador
+        para una mejor experiencia
+    ="<![endif]-->"
+    .video-container
+        %video{autoplay:true, loop:true}
+            %source{src:"videos/mp4/bbq.mp4", type:"video/mp4"}
+            %source{src:"videos/webm/bbq.webm", type:"video/webm"}
+
+
