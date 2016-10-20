@@ -1,8 +1,8 @@
 !!!5
 %html{class:"no-js", lang:"es"}
     %head
-        %meta{chartset:"utf-8"}
-        %title La mejor comida en Restaurante Villarreal
+        %meta{charset:"utf-8"}
+        %title La mejor comida esta en Restaurante Villarreal
         %meta{name:"description", content:"Come rico en el mejor restaurante de la ciudad de Quito"}
         %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Dancing+Script"}
         %link{rel:"stylesheet", href:"css/normalize.css"}
@@ -13,7 +13,7 @@
     %body
     ="<!--[if lt IE 9]>"
     %p{class:"browserupgrade"}
-        Estas usando un navegado
+        Estas usando un navegador
         %strong desactualizado
         Por favor
         %a{href:"http://browsehappy.com/"}
@@ -26,8 +26,18 @@
             %source{src:"videos/webm/bbq.webm", type:"video/webm"}
     .row.full-height.middle-xs.center-xs.relative.up
         .col-xs-12
-            .box
+            .box.white-text
                 %img{src:"imgs/logo.png", width:"200"}
-                %h1.white-text.dancing-script.title.no-margin Restaurante Villarreal
+                %h1.dancing-script.title.no-margin Restaurante Villarreal
+                %p#is-open Abierto ahora
+        %nav.fixed.top.right.white-text#navigation
+            %ul
+                %li Inicio
+                %li Menú
+                %li Galería
+                %li Contacto
+                %li Como llegar
+
+
 
 

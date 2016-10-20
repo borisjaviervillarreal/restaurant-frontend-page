@@ -150,8 +150,20 @@ textarea {
     margin: 0;
 }
 
+.fixed{
+    position: fixed;
+}
+
 .relative{
     position: relative;
+}
+
+.top{
+    top: 1em;
+}
+
+.right{
+    right: 5em;
 }
 
 .up{
