@@ -127,6 +127,18 @@ textarea {
   text-decoration: none;
 }
 
+#description ul {
+  margin: 0px;
+}
+
+#description.absolute {
+  bottom: 0px;
+}
+
+#description.fixed {
+  top: 0px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -202,7 +214,7 @@ textarea {
  * Hide visually and from screen readers
  */
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 /*
