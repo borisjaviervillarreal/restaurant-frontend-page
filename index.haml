@@ -40,10 +40,10 @@
                     %li
                         %a{}= item
         .absolute.black.large-padding.bottom.white-text.full-width#description
-            .row
-                .col-xs-7.col-sm-6.white-text.medium
+            .row.center-xs
+                .col-xs-7.col-sm-6.white-text
                     Atención de primera y comida preparada por chefs especializados
-                .col-xs
+                .col-xs.hidden
                     .box
                         %nav.text-right#navigation
                             %ul.list-inline
@@ -51,6 +51,12 @@
                                     %li
                                         %a{}= item
     .full-height
+
+
+    %script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
+
+    %script
+        window.jQuery || document.write("<script src="/js/vendor/jquery-1.12.0.min"></script>")
 
 
                 
