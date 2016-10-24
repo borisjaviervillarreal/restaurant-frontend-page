@@ -38,9 +38,20 @@
             %ul.list-inline
                 -menu.each do |item|
                     %li
-                        %a= item
-        .absolute.medium.black.large-padding.bottom.white-text.full-width#description
-            Atención de primera y comida preparada por chefs especializados
+                        %a{}= item
+        .absolute.black.large-padding.bottom.white-text.full-width#description
+            .row
+                .col-xs-7.col-sm-6.white-text.medium
+                    Atención de primera y comida preparada por chefs especializados
+                .col-xs
+                    .box
+                        %nav.text-right#navigation
+                            %ul.list-inline
+                                -menu.each do |item|
+                                    %li
+                                        %a{}= item
+    .full-height
+
 
                 
 
