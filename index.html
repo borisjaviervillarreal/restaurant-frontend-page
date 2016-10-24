@@ -30,7 +30,7 @@
       <source src='videos/webm/bbq.webm' type='video/webm'>
     </video>
   </div>
-  <div class='row full-height middle-xs center-xs relative up'>
+  <div class='row full-height middle-xs center-xs relative up' id='home'>
     <div class='col-xs-12'>
       <div class='box white-text'>
         <img src='imgs/logo.png' width='200'>
@@ -60,8 +60,127 @@
         </li>
       </ul>
     </nav>
-    <div class='absolute medium black large-padding bottom white-text full-width' id='description'>
-      Atención de primera y comida preparada por chefs especializados
+    <div class='absolute black large-padding white-text full-width' id='description'>
+      <div class='row middle-xs center-xs'>
+        <div class='col-xs-7 col-sm-6 white-text'>
+          Atención de primera y comida preparada por chefs especializados
+        </div>
+        <div class='col-xs' id='sticky-navigation'>
+          <div class='box'>
+            <nav class='text-right' id='navigation'>
+              <ul class='list-inline'>
+                <li>
+                  <a>Inicio</a>
+                </li>
+                <li>
+                  <a>Menú</a>
+                </li>
+                <li>
+                  <a>Galería</a>
+                </li>
+                <li>
+                  <a>Contacto</a>
+                </li>
+                <li>
+                  <a>Como llegar</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class='text-center relative' id='menu'>
+    <div class='absolute white' id='menu-title'>
+      <h2 class='dancing-script title'>Menú</h2>
+    </div>
+    <div class='row'>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/club-sandwich-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Club Sandwich</h3>
+              <p class='no-margin'>3.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/combo-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Combo hamburguesa</h3>
+              <p class='no-margin'>10.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hamburger-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Hamburguesa</h3>
+              <p class='no-margin'>5.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hot-cakes-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Hot cakes</h3>
+              <p class='no-margin'>15.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/panini-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Panini</h3>
+              <p class='no-margin'>12.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/papas-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Papas</h3>
+              <p class='no-margin'>10.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/club-sandwich-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Club Sandwich</h3>
+              <p class='no-margin'>10.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hamburger-thumb.jpg)'>
+        <div class='screen'>
+          <div class='row middle-xs full-height'>
+            <div class='col-xs-12 white-text'>
+              <h3 class='dancing-script subtitle'>Hamburguesa</h3>
+              <p class='no-margin'>5.00 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script crossorigin='anonymous' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
+  <script>
+    window.jQuery || document.write("<script src='js/vendor/jquery-1.12.0.min'><\/script>")
+  </script>
+  <script src='js/main.js'></script>
 </html>
