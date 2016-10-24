@@ -175,6 +175,14 @@ textarea {
     }
 }
 
+#menu-title{
+    width: 300px;
+    z-index: 5;
+    top: 50%;
+    left: calc(50% - 150px);
+    top: calc(50% - 2.5em);
+}
+
 
 
 
@@ -234,6 +242,10 @@ textarea {
 
 .black{
     background-color: #222;
+}
+
+.white{
+    background-color:white;
 }
 
 .white-text{

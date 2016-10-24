@@ -161,6 +161,14 @@ textarea {
   transition: top 0.8s;
 }
 
+#menu-title {
+  width: 300px;
+  z-index: 5;
+  top: 50%;
+  left: calc(50% - 150px);
+  top: calc(50% - 2.5em);
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -206,6 +214,10 @@ textarea {
 
 .black {
   background-color: #222;
+}
+
+.white {
+  background-color: white;
 }
 
 .white-text {
