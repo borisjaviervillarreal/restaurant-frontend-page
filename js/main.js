@@ -4,6 +4,13 @@
 	let currentPosition = 0
 
 	const imageCounter = $("[data-name='image-counter']").attr("content")
+	const email = "javier.villarreal.623@gmail.com"
+
+	$('#contact-form').on('submit',function(ev){
+		ev.preventDefault()
+		sendForm($(this))
+		return false
+	})
 
 	$('#sticky-navigation').removeClass('hidden')
 	$('#sticky-navigation').slideUp(0)
@@ -57,6 +64,18 @@
 
 		return $(window).scrollTop() > $(window).height() - (descriptionHeight * 2)
 
+	}
+
+	function sendForm($form){
+		console.log($form.formObject())
+		/*
+		$.ajax({
+			url: $form.attr("action"),
+			method:"POST",
+			data: $form.formObject(),
+			dataType:"json"
+		})
+		*/
 	}
 
 })()
