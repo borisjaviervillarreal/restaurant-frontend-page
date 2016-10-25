@@ -1,1 +1,1 @@
-"use strict";!function(){function i(i){i.focus()}var n="#contact-form";$(n).find("input").on("change",function(n){var t=$(n.target),s=$(t).next();i(s)})}();
+"use strict";!function(){function i(){if(n());else{var i=$(s).find(".input:invalid").first().parent();t(i)}}function n(){return document.querySelector(s).checkValidity()}function t(i){$(".step.active").removeClass("active"),i.addClass("active"),i.find(".input").focus()}var s="#contact-form";$(s).find(".input").on("change",function(n){var s=$(n.target),a=s.parent().next(".step");a.length>0?t(a):i()})}();
