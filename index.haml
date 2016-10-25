@@ -89,7 +89,7 @@
         .row.middle-xs.full-height
             .col-xs-12
                 .box
-                    %form{action:"", method:"POST"}
+                    %form{action:"https://formspree.io/javier.villarreal.623@gmail.com", method:"POST"}
                         .row.center-xs
                             .col-xs-2.col-md-1
                                 .box
@@ -97,7 +97,8 @@
                                 .box
                                     %input{type:"email", name:"email", placeholder:"Coloca tu correo electrónico"}
                                     %input{type:"text", name:"name", placeholder:"Coloca tus nombres"}
-                                    %textarea{name:"body", placeholder:"Coloca tu mensaje"}
+                                    %textarea{name:"body", placeholder:"Escribe aquí tu mensaje..."}
+                                    %button{type:"submit", class:"btn btn-success"}Enviar
 
 
     %script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
