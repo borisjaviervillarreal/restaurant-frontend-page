@@ -169,6 +169,24 @@ textarea {
   top: calc(50% - 2.5em);
 }
 
+#gallery {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#gallery .inner {
+  white-space: nowrap;
+}
+
+#gallery .image {
+  display: inline-block;
+  margin-right: -4px;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

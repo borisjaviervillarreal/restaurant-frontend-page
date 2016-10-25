@@ -1,3 +1,4 @@
+-gallery_images = ["club-sandwich.jpg","papas.jpg","hamburger.jpg", "panini.jpg","club-sandwich.jpg","papas.jpg"]
 !!!5
 %html{class:"no-js", lang:"es"}
     %head
@@ -63,6 +64,11 @@
                             .col-xs-12.white-text
                                 %h3.dancing-script.subtitle=photo[:name]
                                 %p.no-margin=photo[:pricing] + " USD"
+    #gallery
+        .inner
+            -gallery_images.each do |image|
+                .image{style:"background-image:url(imgs/food/#{image});"}
+
 
     %script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
 
