@@ -199,7 +199,19 @@ textarea {
   margin-top: -200px;
 }
 
-input, textarea {
+.step-form .step {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 1s;
+  padding: 1em 0.5em;
+  margin: 0px;
+}
+
+.step-form .step.active {
+  max-height: 150px;
+}
+
+.step-form .step input, .step-form .step textarea {
   font-size: 2em;
   padding: 0.5em;
   border: none;

@@ -213,7 +213,18 @@ textarea {
     margin-top: -200px;
 }
 
-input, textarea{
+.step-form{
+    .step{
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 1s;
+      padding:1em 0.5em;
+      margin:0px;
+      &.active{
+        max-height: 150px;
+      }
+
+    input, textarea{
     font-size: 2em;
     padding: 0.5em;
     border:none;
@@ -221,7 +232,8 @@ input, textarea{
     border-bottom: solid 1px #eee;
     background-color:transparent;
     width: 100%;
-
+    }
+}
 }
 
 

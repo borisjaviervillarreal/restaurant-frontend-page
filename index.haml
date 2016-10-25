@@ -89,16 +89,20 @@
         .row.middle-xs.full-height
             .col-xs-12
                 .box
-                    %form{action:"https://formspree.io/javier.villarreal.623@gmail.com", method:"POST",id:"contact-form"}
+                    %form{action:"https://formspree.io/javier.villarreal.623@gmail.com", method:"POST",id:"contact-form", class:"step-form"}
                         .row.center-xs
                             .col-xs-2.col-md-1
                                 .box
                             .col-xs-5
                                 .box
-                                    %input{type:"email", name:"email", placeholder:"Coloca tu correo electrónico"}
-                                    %input{type:"text", name:"name", placeholder:"Coloca tus nombres"}
-                                    %textarea{name:"body", placeholder:"Escribe aquí tu mensaje..."}
-                                    %button{type:"submit", class:"btn btn-success"}Enviar
+                                    %fieldset.step
+                                        %input{type:"email", name:"email", placeholder:"Coloca tu correo electrónico",class:"input"}
+                                    %fieldset.step
+                                        %input{type:"text", name:"name", placeholder:"Coloca tus nombres",class:"input"}
+                                    %fieldset.step
+                                        %textarea{name:"body", placeholder:"Escribe aquí tu mensaje...", class:"input"}
+                                    %div
+                                        %button{type:"submit", class:"btn btn-success"}Enviar
 
 
     %script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
@@ -107,6 +111,7 @@
         window.jQuery || document.write("<script src='js/vendor/jquery-1.12.0.min'><\/script>")
     %script{src:"js/form_object.js"}
     %script{src:"js/main.js"}
+    %script{src:"dist/steps.js"}
 
 
                 
