@@ -188,6 +188,9 @@ textarea {
     overflow-x: hidden;
     .inner{
         white-space: nowrap;
+        position:relative;
+        left: 0%;
+        transition: left 1.5s;
     }
     .image{
         display: inline-block;
