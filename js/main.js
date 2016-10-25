@@ -67,15 +67,18 @@
 	}
 
 	function sendForm($form){
-		console.log($form.formObject())
-		/*
+		//console.log($form.formObject())
+		
 		$.ajax({
 			url: $form.attr("action"),
 			method:"POST",
 			data: $form.formObject(),
-			dataType:"json"
+			dataType:"json",
+			success: function(){
+				alert("El envio del email ha sido satisfactorio")
+			}
 		})
-		*/
+		
 	}
 
 })()
