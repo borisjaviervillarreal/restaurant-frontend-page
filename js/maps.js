@@ -19,20 +19,27 @@
 
 	//Cargar API de google maps
 	google.maps.event.addDomListener(window,'load',()=>{
-		const map = new google.maps.Map(
+
+		UserLocation.get((coords)=>{
+			let $lat = coords.lat
+			let $lng = coords.lng
+
+			console.log($lat)
+			console.log($lng)
+
+			const map = new google.maps.Map(
 			document.getElementById('map'),
 			{
 				center: {
-					lat: -0.2576842,
-					lng: -78.5509023
+					lat: $lat,
+					lng: $lng
 				},
 				zoom: 14
 			}
 		)
-
-		UserLocation.get((coords)=>{
-			console.log(coords)
-		})
 	})
+
+
+})
 
 })()
