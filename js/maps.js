@@ -17,29 +17,60 @@
 		}
 	}
 
+	//Ubicacion del restaurante
+	const my_place = {
+					lat: -0.176242,
+					lng: -78.485942
+					}
+
 	//Cargar API de google maps
 	google.maps.event.addDomListener(window,'load',()=>{
-
-		UserLocation.get((coords)=>{
-			let $lat = coords.lat
-			let $lng = coords.lng
-
-			console.log($lat)
-			console.log($lng)
-
-			const map = new google.maps.Map(
+		const map = new google.maps.Map(
 			document.getElementById('map'),
 			{
-				center: {
-					lat: $lat,
-					lng: $lng
-				},
+				center: my_place,
 				zoom: 14
 			}
 		)
+
+
+		//Marcador en el mapa
+		const marker = new google.maps.Marker({
+			map: map,
+			position: my_place,
+			title: "Restaurante Villarreal",
+			visible: true
+
+		})
+
+
+		UserLocation.get((coords)=>{
+			//Calcular distancia del restaurante al usuario
+
+			let origen = new google.maps.LatLng(coords.lat, coords.lng)
+			let destino = new google.maps.LatLng(my_place.lat, my_place.lng)
+
+			let service = new google.maps.DistanceMatrixService()
+
+			service.getDistanceMatrix({
+				origins: [origen],
+				destinations: [destino],
+				travelMode: google.maps.TravelMode.DRIVING
+			},(response, status)=>{
+				if(status === google.maps.DistanceMatrixStatus.OK){
+					const duration_element = response.rows[0].elements[0]
+					const duracion_viaje = duration_element.duration.text
+					document.querySelector('#message').innerHTML = `
+														Estas a ${duracion_viaje} de visitarnos en
+														<span class="dancing-script">
+														Restaurante Villarreal
+														</span>
+														`
+				}
+
+			})
+
+		})
 	})
-
-
-})
 
 })()
