@@ -89,6 +89,7 @@
         .row.middle-xs.full-height
             .col-xs-12
                 .box
+                    %p.text-center.medium#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo.
                     %form{action:"https://formspree.io/javier.villarreal.623@gmail.com", method:"POST",id:"contact-form", class:"step-form"}
                         .row.center-xs
                             .col-xs-2.col-md-1.text-center
@@ -102,14 +103,11 @@
                             .col-xs-5
                                 .box
                                     %fieldset.step.active
-                                        %input{type:"email", name:"email", placeholder:"Coloca tu correo electrónico",class:"input", required:true}
+                                        %input{type:"email", name:"email", placeholder:"Correo electrónico",class:"input", required:true}
                                     %fieldset.step
-                                        %input{type:"text", name:"name", placeholder:"Coloca tus nombres",class:"input", required:true}
+                                        %input{type:"text", name:"name", placeholder:"Nombres",class:"input", required:true}
                                     %fieldset.step
-                                        %textarea{name:"body", placeholder:"Escribe aquí tu mensaje...", class:"input", required:true}
-                                    %div
-                                        %button{type:"submit", class:"btn btn-success"}Enviar
-
+                                        %textarea{name:"body", placeholder:"Mensaje...", class:"input", required:true}
 
     %script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
 
