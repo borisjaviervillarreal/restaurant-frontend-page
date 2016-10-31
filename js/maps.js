@@ -29,7 +29,7 @@
 			document.getElementById('map'),
 			{
 				center: my_place,
-				zoom: 14
+				zoom: 16
 			}
 		)
 

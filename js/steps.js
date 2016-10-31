@@ -68,7 +68,7 @@
 		//$next_step.focus()
 
 		//Coordinar circulos
-		const posicion = ($next_step.index('.step') * 2) + 1
+		const posicion = ($next_step.index('.step') ) + 1
 
 		$('.path-step.active').removeClass('active')
 

@@ -34,24 +34,25 @@
                 %h1.dancing-script.title.no-margin Restaurante Villarreal
                 %p#is-open
                     %i.glyphicon.glyphicon-time
-                    Abierto ahora
+                    %span.text Abierto ahora
         %nav.fixed.top.right.white-text#navigation
-            -menu = ["Inicio", "Menú", "Galería", "Contacto", "Como llegar"]
+            -menu = [{title:"Home", link:"#home"}, {title:"Menu", link:"#menu"}, {title:"Galeria", link:"#gallery"}, {title:"Contacto", link:"#contact"}, {title:"Como llegar", link:"#location"}]
             %ul.list-inline
                 -menu.each do |item|
                     %li
-                        %a{}= item
+                        %a{href:item[:link]}= item[:title]
         .absolute.black.large-padding.white-text.full-width#description
             .row.middle-xs.center-xs
                 .col-xs-7.col-sm-6.white-text
                     Atención de primera y comida preparada por chefs especializados
                 .col-xs#sticky-navigation
                     .box
-                        %nav.text-right#navigation
+                        %nav.text-right#navigation1.responsive-nav
+                            %i.glyphicon.glyphicon-menu-hamburger.white-text.subtitle.glyphicon-remove#menu-opener
                             %ul.list-inline
                                 -menu.each do |item|
                                     %li
-                                        %a{}= item
+                                        %a.menu-link{href:item[:link]}= item[:title]
     .text-center.relative#menu
         .absolute.white#menu-title
             %h2.dancing-script.title Menú
@@ -92,15 +93,15 @@
                     %p.text-center.medium#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo.
                     %form{action:"https://formspree.io/javier.villarreal.623@gmail.com", method:"POST",id:"contact-form", class:"step-form"}
                         .row.center-xs
-                            .col-xs-2.col-md-1.text-center
+                            .col-xs-12.col-sm-2.col-md-1.first-sm
                                 .box
                                     -3.times do |i|
                                         -if i==0
                                             .path-step.active
                                         -else
                                             .path-step
-                                        %br
-                            .col-xs-5
+                                        
+                            .col-xs-12.col-sm-3.first-xs
                                 .box
                                     %fieldset.step.active
                                         %input{type:"email", name:"email", placeholder:"Correo electrónico",class:"input", required:true}

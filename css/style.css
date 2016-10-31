@@ -15,6 +15,7 @@ html {
 
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 /*
@@ -108,22 +109,22 @@ textarea {
   transform: translate(-50%, -50%);
 }
 
-#navigation li {
+#navigation li, #navigation1 li {
   @extends .medium;
   padding: 5px 10px;
   transition: all 0.5s;
 }
 
-#navigation li:hover {
+#navigation li:hover, #navigation1 li:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#navigation li a {
+#navigation li a, #navigation1 li a {
   color: white;
   cursor: pointer;
 }
 
-#navigation li a:hover {
+#navigation li a:hover, #navigation1 li a:hover {
   text-decoration: none;
 }
 
@@ -163,7 +164,7 @@ textarea {
 
 #menu-title {
   width: 300px;
-  z-index: 5;
+  z-index: 4;
   top: 50%;
   left: calc(50% - 150px);
   top: calc(50% - 2.5em);
@@ -206,7 +207,7 @@ textarea {
   background-color: #a2a2a2;
   margin-top: 2em;
   opacity: 0.4s;
-  display: inline-block;
+  display: block;
   transition: all 0.4s;
   cursor: pointer;
 }
@@ -252,6 +253,10 @@ textarea {
 
 #map {
   height: 500px;
+}
+
+#menu-opener {
+  display: none;
 }
 
 /* ==========================================================================
@@ -421,6 +426,51 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-height: 600px) {
+  #contact, .container .card {
+    margin-top: -15%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #navigation {
+    display: none !important;
+  }
+  #menu-opener {
+    display: block;
+  }
+  .path-step {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  .responsive-nav ul {
+    position: absolute;
+    width: 100%;
+    font-size: 1.5em;
+    top: 60px;
+    background-color: #222;
+    left: 0px;
+    text-align: center;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+  .responsive-nav ul.active {
+    max-height: 80vh;
+  }
+  .responsive-nav ul li {
+    display: block;
+    margin-top: 1em;
+    padding: 10px 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive-nav ul {
+    top: 90px;
+  }
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
